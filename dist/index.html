@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+</head>
+<body>
+    <div id="projects">
+        <form action="">
+            <label for="form">
+                <input type="text" placeholder="Project Name" id="project-data" name="project">
+                <button id="project" class="button is-info">Add Project</button>
+            </label>
+        </form>
+        <div id="btnsDiv"></div>
+    </div>
+    <div id="todos">
+        <form action="">
+            <label class="form" for="Todos">
+                <input class="form-items input is-info " name="title" id="title" type="text" placeholder="title">
+                <input class="form-items input is-info" name="desc" id="desc" type="text" placeholder="desc">
+                <input class="form-items input is-info" name="due" id="due" type="text" placeholder="due">
+                <input class="form-items input is-info" name="priority" id="priority" type="text" placeholder="Priority">
+                <button id="todo" class="button is-info">Add Item</button>
+            </label>
+            
+        </div>
+        <button id="remove">Remove Project</button>
+        <div id="items"></div>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
