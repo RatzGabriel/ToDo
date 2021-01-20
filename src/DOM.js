@@ -27,15 +27,15 @@ function addTodo(e){
         const descP = document.createElement('p');
         const dueP = document.createElement('p');
         const prioP = document.createElement('p');
-        const btnEdit = document.createElement('button');
+        
         const btnRemove = document.createElement('button');
         itemDiv2.classList.add('ItemContainer');
         dueP.innerText=`Due Date: ${e.SingleProject[i].due}`;
         prioP.innerText=`Priority: ${e.SingleProject[i].priority}`;
         titleH1.innerText=`Todo: ${e.SingleProject[i].title}`;
         descP.innerText=`Description: ${e.SingleProject[i].desc}`;
-        btnRemove.innerText="Remove Todo"
-        btnEdit.innerText="Edit Todo Name";
+        btnRemove.innerText="Remove Todo";
+        
 
         btnRemove.addEventListener('click',function(){
             
@@ -45,20 +45,39 @@ function addTodo(e){
             addTodo(e)
             
         })
-        btnEdit.addEventListener('click',function(){
+        titleH1.addEventListener('click',function(){
             let allProjects = [];
             allProjects=JSON.parse(localStorage.getItem("AllProjects"));
-            e.SingleProject[i].title=prompt('hello')
+            e.SingleProject[i].title=prompt('Please enter a new Todo Title')
+            addTodo(e)
+        })
+        descP.addEventListener('click',function(){
+            let allProjects = [];
+            allProjects=JSON.parse(localStorage.getItem("AllProjects"));
+            e.SingleProject[i].desc=prompt('Please enter a new Description')
+            addTodo(e)
+        })
+        dueP.addEventListener('click',function(){
+            let allProjects = [];
+            allProjects=JSON.parse(localStorage.getItem("AllProjects"));
+            e.SingleProject[i].due=prompt('Please enter a new Due Date')
+            addTodo(e)
+        })
+        prioP.addEventListener('click',function(){
+            let allProjects = [];
+            allProjects=JSON.parse(localStorage.getItem("AllProjects"));
+            e.SingleProject[i].priority=prompt('Please enter a new Priority')
             addTodo(e)
         })
 
-        titleH1.appendChild(btnEdit);
+        
         itemDiv2.appendChild(titleH1);
         itemDiv2.appendChild(descP);
         itemDiv2.appendChild(dueP);
         itemDiv2.appendChild(prioP);
         itemDiv2.appendChild(btnRemove);
         itemDiv.appendChild(itemDiv2);
+
         
     }
     

@@ -15,7 +15,7 @@ function createProject(){
         allProjects.push(project);
         loop(allProjects)
         saveLocal();
-        return allProjects
+        getProjectName.value=""
 }
 }
 
@@ -33,11 +33,14 @@ function projectListener(btn){
 function todo(){
     for(let i = 0;i<allProjects.length;i++){
         if(allProjects[i].status==true){
-            console.log(allProjects[i])
             const todo = new Todo(title.value,desc.value,due.value,priority.value,"","");
             allProjects[i].SingleProject.push(todo);
             saveLocal();
-            addTodo(allProjects[i])
+            addTodo(allProjects[i]);
+            title.value="";
+            desc.value="";
+            due.value="";
+            priority.value=""
         }
     }
 }

@@ -1,15 +1,18 @@
 
-import { createProject,restoreLocal,todo,remove } from "./ProTodo"
+import { createProject,restoreLocal,todo,remove } from "./ProTodo";
+import { compareAsc, format } from 'date-fns';
+
+
 let allProjects=[];
 
 window.onload=function(){
-    let allProjects=[];
-    restoreLocal()
-    createProject()
-    
+        let allProjects=[];
+        restoreLocal()
+        createProject()
+
 }
 
-    
+
 const project = document.getElementById('project');
 project.addEventListener('click',function(e){
         e.preventDefault();
