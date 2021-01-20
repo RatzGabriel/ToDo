@@ -38,6 +38,7 @@ function addTodo(e){
         btnEdit.innerText="Edit Todo Name";
 
         btnRemove.addEventListener('click',function(){
+            
             let allProjects = [];
             allProjects=JSON.parse(localStorage.getItem("AllProjects"));
             e.SingleProject.splice(i,1)

@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>ToDo</title>
 </head>
 <body>
     <div id="projects">
-        <form action="">
+        <form id="form" action="">
             <label for="form">
                 <input type="text" placeholder="Project Name" id="project-data" name="project">
-                <button id="project" class="button is-info">Add Project</button>
+                <button id="project"  class="projectBtn">Add Project</button>
             </label>
         </form>
+        <p id="projectsHeader">Projects:</p>
         <div id="btnsDiv"></div>
     </div>
     <div id="todos">
@@ -26,7 +28,8 @@
             </label>
             
         </div>
-        <button id="remove">Remove Project</button>
+        <button class="button is-dark" id="remove">Remove Project</button>
+        <p id="projectsHeader">To Do</p>
         <div id="items"></div>
         </form>
     </div>
