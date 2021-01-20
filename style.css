@@ -1,0 +1,84 @@
+:root{
+    background-color:rgb(13, 29, 65);
+    text-align: center;
+    
+}
+
+#project-data{
+    height: 3rem;
+    width: 16rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+
+#projects{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#projectsHeader{
+    font-size: 3rem;
+    color: white;
+}
+
+#btnsDiv{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+}
+
+.projectBtn{
+    height: auto;
+    width: auto;
+    border: none;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #aa1c6a;
+    color: white;
+    font-size: 2rem;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#todos{
+    background-color: #7f90c2;
+    padding: 2rem;
+    margin: 1rem;
+    height: 3rem;
+}
+
+#remove{
+    background-color: rgb(235, 6, 6);
+    border: none;
+    height: 3rem;
+    cursor: pointer;
+    width: 5rem;
+    margin: 2rem auto;
+    
+}
+
+.ItemContainer{
+    background-color: white;
+    color: black;
+    padding: 2rem 2rem;
+}
+
+#items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-items{
+    height: 1rem;
+    width: auto;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#editBtn{
+    background-color: red;
+}
